@@ -1,0 +1,619 @@
+<!doctype html>
+<html>
+<head>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R478EKGH6M');
+</script>
+    
+<meta charset="UTF-8">
+
+<title> Wanted </title>
+	
+<!-- import external .js scripts here -->
+	
+<script src="js/createFaces.js" ></script>
+<script src="js/drawFaces.js" ></script>
+<script src="js/checkDistance.js" ></script>
+
+<!-- <script type="text/javascript" src="#" ></script> -->
+<!-- modify CSS properties here -->
+
+<style type="text/css">
+body,td,th {
+font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif", "Bernard MT Condensed";
+font-size: 14px;
+color: rgba(255,255,255,1);
+}
+
+body {
+background-color: #15151A;
+}
+	
+h1 {
+font-size: 70px;
+color: #E4E4E9;
+text-align: left; 
+padding-left: 3%;
+}
+h2 {
+display: flex;
+ flex-wrap: wrap;
+font-size: 25px;
+color: #E4E4E9;
+text-align: left;  
+padding-left: 3%;
+	}
+	
+p{
+display: flex;
+flex-wrap: wrap;
+font-size: 25px;
+color: #E4E4E9;
+text-align: left;  
+padding-left: 3%;
+	}
+a {
+display: flex;
+ flex-wrap: wrap;
+font-size: 25px;
+color: cornflowerblue;
+text-align: left;  
+padding-left: 3%;
+	}
+	
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 24%;
+  padding: 0 4px;
+}
+
+.column img {
+  	margin-top: 8px;
+  	vertical-align: middle;
+  	width: 100%;
+	border-radius: 20px;
+}
+	
+	.column h2 {
+font-size: 30px;
+color: #E4E4E9;
+text-align: left; 
+color: #E4E4E9; 
+padding: 5%;
+	}
+	
+.column2 {
+  flex: 50%;
+  max-width: 49%;
+  padding: 0 4px;
+}
+
+#container {
+position: relative;
+text-align: left;
+width: 95%;
+height: 800px;
+}
+
+#fmxCanvas {
+position: relative;
+background-color:#15151A;
+border: rgba(255,255,255,1) solid;
+margin: 10px;
+cursor: crosshair;
+display: inline-block;
+}
+	
+.button{
+	border: none;
+  	color: white;
+  	text-align: center;
+  	text-: none;
+  	display: inline-block;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+	}
+.button:hover{
+	opacity: .5;
+	transition: .5s ease;
+	}
+
+</style>
+
+</head>
+
+<body>
+<h1>Wanted</h1>
+<div class="row">
+	<div class="column2">
+		<h2>Project Type: School => Personal Project</h2>
+		<h2>Game Type: Minigame</h2>
+		<h2>Software: HTML Canvas</h2>
+		<h2>Coding Languages: JavaScript, HTML, CSS</h2>
+	</div>
+	
+	<div class="column2">
+	<p>This minigame is a recreation of the one in Super Mario 64 DS. It was the capstone project for my Creative Coding Class and has since been refined and built upon outside of class.</p>
+	<a href="https://fmx310.santiago.bz/FMX310/sp22/hunter_simone/08_oopgame/oopgame_07.html" target="_blank">Play version made in class</a>
+		<h2>*click below to play</h2>
+	</div>
+	</div>
+	
+	
+<div id="container">
+<!-- START HTML CODE HERE -->
+
+<div style = "text-align:center;">
+	<canvas id="fmxCanvas" width="640" height="640"></canvas>
+</div>
+
+
+<div id="display"></div>
+	
+<!--    <img src="img/" id=""alt=""/>   -->
+	
+<img src="img/wanted_1.png" style = "display:none" id="img1">
+<img src="img/wanted_2.png" style = "display:none" id="img2">
+<img src="img/wanted_3.png" style = "display:none" id="img3">
+<img src="img/wanted_4.png" style = "display:none" id="img4">
+<img src="img/wanted_5.png" style = "display:none" id="img5">
+<img src="img/wanted_6.png" style = "display:none" id="img6">
+<img src="img/img_07.png" style = "display:none" id="img7">
+	
+<img src="img/poster.png" style = "display:none" id="poster">
+
+<img src="img/oop_game_layout_1.png" style = "display:none" id="bg">
+
+<audio id="hit" >
+	<source src="audio/hit.mp3" type="audio/mp3" />
+</audio>
+	
+<audio id="miss" >
+	<source src="audio/miss.mp3" type="audio/mp3" />
+</audio>
+	
+<audio id="gameOver" >
+	<source src="audio/gameOver.mp3" type="audio/mp3" />
+</audio>
+	
+
+<br><br>
+	
+<!-- FINISH HTML CODE HERE -->
+</div>
+	
+<div class="row">
+	<div class="column">
+	<img src="img/img1.png">
+	</div>
+	
+	<div class="column">
+	<img style="width: 200%" src="img/img2.png">
+	</div>
+	
+	<div class="column">
+	
+	</div>
+	
+	<div class="column">
+	
+	</div>
+	</div>
+	
+<div>
+	<a href="javascript:window.history.back();" class="button" style = "text-decoration: none"><img border="0"  src="img/go_back.png"></a>
+	  </div>
+<script>
+
+///////////////////////////////////////////////////////////////////////
+// DECLARE requestAnimFrame
+
+var rAF = window.requestAnimFrame ||
+window.mozRequestAnimFrame ||
+window.webkitRequestAnimFrame ||
+window.msRequestAnimFrame;
+
+var fps = 30;
+
+window.requestAnimFrame = (
+
+function(callback) {
+
+return rAF ||
+
+function(callback) {
+window.setTimeout(callback, 1000 / fps);
+};
+
+})();
+
+///////////////////////////////////////////////////////////////////////
+// DEFINE GLOBAL VARIABLES HERE
+
+var canvas;
+var ctx;
+canvas = document.getElementById("fmxCanvas");
+ctx = canvas.getContext("2d");
+
+var canvas1;
+var ctx1;
+canvas1 = document.createElement("canvas");
+ctx1 = canvas1.getContext("2d");
+
+canvas1.width = canvas.width;
+canvas1.height = canvas.height;
+
+var canvas2;
+var ctx2;
+canvas2 = document.createElement("canvas");
+ctx2 = canvas2.getContext("2d");
+
+canvas2.width = canvas.width;
+canvas2.height = canvas.height;
+
+var display;
+display = document.getElementById('display');
+
+var counter;
+var time;
+
+
+//Images
+//var x = new Image()
+	//x = document.getElementById('x')
+
+var img1 = new Image();
+	  img1 = document.getElementById("img1");
+	
+var img2 = new Image();
+	  img2 = document.getElementById("img2");
+	
+var img3 = new Image();
+	  img3 = document.getElementById("img3");
+	
+var img4 = new Image();
+	  img4 = document.getElementById("img4");
+	
+var img5 = new Image();
+	  img5 = document.getElementById("img5");
+	
+var img6 = new Image();
+	 img6 = document.getElementById("img6");
+	
+var img7 = new Image();
+	 img7 = document.getElementById("img7");
+	
+var posterImg = new Image();
+	 posterImg = document.getElementById("poster");
+	
+var img = new Array();
+	img[0] = img1;
+	img[1] = img2;
+	img[2] = img3;
+	img[3] = img4;
+	img[4] = img5;
+	img[5] = img6;
+	
+var bg = new Image();
+	 bg = document.getElementById("bg");
+	
+var amount1, amount2, amount3, amount4, amount5, amount6
+
+var timer = 10
+
+var startTime = 20
+
+var level = 0
+
+var startGame = 0
+	
+
+var faces1 = new Array()
+var faces2 = new Array()
+var faces3 = new Array()
+var faces4 = new Array()
+var faces5 = new Array()
+
+var wanted = new Array()
+//Functions
+
+function beginGame(){
+	
+	if (startGame == 0) {
+			startGame = 1; // FLAG 
+			level = 1;
+			timer = startTime;
+	}else if(startGame == 2 ){
+		startGame = 0;
+	}
+}	
+
+///////////////////////////////////////////////////////////////////////
+// CALL THE EVENT LISTENERS
+
+window.addEventListener("load", setup, false);
+//////////////////////////////////////////////////////////////////////
+// ADD EVENT LISTENERS
+
+canvas.addEventListener("mousemove", mousePos, false);
+window.addEventListener("click", beginGame, false);
+window.addEventListener("click", checkDistance, false);
+
+
+//////////////////////////////////////////////////////////////////////
+// MOUSE COORDINATES
+
+var stage, mouseX, mouseY;
+
+function mousePos(event) {
+stage = canvas.getBoundingClientRect();
+mouseX = event.clientX - stage.left;
+mouseY = event.clientY - stage.top;
+}
+
+/////////////////////////////////////////////////////////////////////
+// INITIALIZE THE STARTING FUNCTION
+
+function setup() {
+
+/////////////////////////////////////////////////////////////////////
+// DECLARE STARTING VALUES OF GLOBAL VARIABLES
+
+counter = 0;
+mouseX = canvas.width/2;
+mouseY = canvas.height/2;
+
+/////////////////////////////////////////////////////////////////////
+// CALL SUBSEQUENT FUNCTIONS, as many as you need
+
+createFaces(level)
+	
+clear(); // COVER TRANSPARENT CANVAS OR CLEAR CANVAS
+
+draw(); // THIS IS WHERE EVERYTHING HAPPENS
+
+}
+
+////////////////////////////////////////////////////////////////////
+// CLEAR THE CANVAS FOR ANIMATION
+// USE THIS AREA TO MODIFY BKGD
+
+function clear() {
+
+ctx.clearRect(0,0,canvas.width, canvas.height);
+ctx1.clearRect(0,0,canvas.width, canvas.height);
+ctx2.clearRect(0,0,canvas.width, canvas.height);
+
+// clear additional ctxs here if you have more than canvas1
+
+}
+
+////////////////////////////////////////////////////////////////////
+// THIS IS WHERE EVERYTHING HAPPENS
+
+function draw() {
+
+counter += 0.1; // EASIER FOR SINE COSINE FUNCTIONS
+
+if (counter > Math.PI*200) { counter = 0; } // RESET COUNTER
+
+clear(); // USE THIS TO REFRESH THE FRAME AND CLEAR CANVAS
+
+////////////////////////////////////////////////////////////////////
+// >>>START HERE>>>START HERE>>>START HERE>>>START HERE>>>START HERE
+
+ //console.log(Math.sin(counter/1))
+//console.log(level)
+	
+
+	
+if (startGame == 0) {  // START SCREEN 
+	
+	ctx.save()
+	ctx.scale( 0.5,0.5)
+	ctx.drawImage(posterImg,0,0)
+	ctx.restore()
+	
+	ctx.save();
+	var startmessage = "CLICK ANYWHERE TO PLAY";
+	ctx.font = 'bold 40px Helvetica';
+	ctx.textAlign = "center"
+	ctx.fillStyle = "white"; 
+	ctx.fillText(startmessage, 325, 400); 
+	ctx.restore();
+	
+	ctx.drawImage(img1,280, 13);
+	
+	ctx.save()
+	ctx.scale(.75,.75)
+	ctx.drawImage(img1,630, 630);
+	ctx.restore()
+	
+	ctx.save()
+	ctx.scale(.75,.75)
+	ctx.drawImage(img2,410, 220);
+	ctx.restore()
+	
+	ctx.save()
+	ctx.scale(.75,.75)
+	ctx.drawImage(img2,210, 620);
+	ctx.restore()
+	
+	ctx.save();
+	ctx.textAlign = "center"
+	var startmessage1 = "CLICK THE FACE IN THE POSTER";
+	ctx.font = 'bold 25px Helvetica';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(startmessage1, 330, 180); 
+	ctx.restore();
+	
+	//Level
+ctx.save();
+	var timermessage = "Timer";
+	ctx.textAlign = "center"
+	ctx.font = ' 60px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(timermessage, 100, 50); 
+ctx.restore();
+	
+ctx.save();;
+	ctx.font = ' 100px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.textAlign = "center"
+	ctx.fillText(20, 100,136);
+ctx.restore();
+	
+//Level
+ctx.save();
+	var levelNo = "Level: "+level+"";
+	ctx.font = ' 50px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(levelNo, 420, 136); 
+ctx.restore();
+	
+	
+} 
+	
+if (startGame == 1){
+	
+	ctx.save()
+	ctx.beginPath()
+		ctx.rect(0,0,canvas.width,canvas.height)
+	ctx.closePath()
+		ctx.fillStyle = "rgba(21,21,26,1.00)"
+		ctx.fill()
+	ctx.restore()
+	
+	drawFaces(level)
+	//ctx.drawImage(bg,0,0)
+	//wanted poster face
+	ctx.save()
+		ctx.scale(.5,.5)
+		ctx.drawImage(posterImg,0,0)
+	ctx.restore()
+	ctx.save()
+		//ctx.scale(1,1)
+		ctx.drawImage(wanted[0].image,280,13)
+	ctx.restore()
+//Game Over
+	timer -= 0.05;
+	if ( timer < 0) {
+		startGame = 2
+		document.getElementById('gameOver').play()
+		faces1 = new Array()
+		faces2 = new Array()	
+		faces3 = new Array()
+		faces4 = new Array()
+	}
+	//Timer
+ctx.save();
+	var timermessage = "Timer";
+	ctx.textAlign = "center"
+	ctx.font = ' 60px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(timermessage, 100, 50); 
+ctx.restore();
+	
+ctx.save();;
+	ctx.font = ' 100px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.textAlign = "center"
+	ctx.fillText(Math.round(timer), 100,136);
+ctx.restore();
+	
+//Level
+ctx.save();
+	var levelNo = "Level: "+level+"";
+	ctx.font = ' 50px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(levelNo, 420, 136); 
+ctx.restore();
+	
+}
+
+if (startGame == 2) {  // END SCREEN 
+	
+	ctx.save()
+	ctx.beginPath()
+		ctx.rect(0,0,canvas.width,canvas.height)
+	ctx.closePath()
+		ctx.fillStyle = "rgba(200,200,200,1)"
+		ctx.fill()
+	ctx.restore()
+	
+	ctx.save()
+	ctx.scale(.5,.5)
+	ctx.drawImage(posterImg,0,0)
+	ctx.restore()
+	
+	ctx.save();
+	ctx.textAlign = "center"
+	ctx.font = 'bold 50px Helvetica';
+	ctx.fillStyle = "white"; 
+	ctx.fillText("GAME OVER", 330, 330);
+	ctx.restore();
+	
+	ctx.save();
+	ctx.textAlign = "center"
+	ctx.font = 'bold 30px Helvetica';
+	ctx.fillStyle = "white"; 
+	ctx.fillText("Click to Start Again", 330, 430)
+	ctx.restore();
+
+	
+	ctx.save();
+	var timermessage = "Timer";
+	ctx.textAlign = "center"
+	ctx.font = ' 60px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(timermessage, 100, 50); 
+ctx.restore();
+	
+ctx.save();;
+	ctx.font = ' 100px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.textAlign = "center"
+	ctx.fillText(0, 100,136);
+ctx.restore();
+	
+//Level
+ctx.save();
+	var levelNo = "Level: "+level+"";
+	ctx.font = ' 50px Bernard MT Condensed';
+	ctx.fillStyle = "white"; 
+	ctx.fillText(levelNo, 420, 136); 
+ctx.restore();
+
+}
+
+// <<<END HERE<<<END HERE<<<END HERE<<<END HERE<<<END HERE<<<END HERE
+///////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////
+// HTML DISPLAY FIELD FOR TESTING PURPOSES
+
+//display.innerHTML = Math.round(mouseX) + " || " + Math.round(mouseY) + " || counter = " + Math.round(counter);
+
+/////////////////////////////////////////////////////////////////
+// LAST LINE CREATES THE ANIMATION
+
+requestAnimFrame(draw); // CALLS draw() every nth of a second
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gun Make Die</title>
+	
+<!-- import external .js scripts here -->
+	
+
+
+<!-- <script type="text/javascript" src="#" ></script> -->
+<!-- modify CSS properties here -->
+	
+<style type="text/css">
+	
+#canvas {
+position: relative;
+background-color:#15151A;
+border: rgba(255,255,255,1) solid;
+margin: 10px;
+cursor: crosshair;
+display: inline-block;
+}
+	
+#container {
+position: relative;
+text-align: center;
+width: 95%;
+height: 800px;
+}
+	
+body {
+background-color: #15151A;
+}
+	
+h1 {
+font-size: 70px;
+color: #E4E4E9;
+text-align: left; 
+padding-left: 3%;
+}
+h2 {
+display: flex;
+ flex-wrap: wrap;
+font-size: 25px;
+color: #E4E4E9;
+text-align: left;  
+padding-left: 3%;
+	}
+	
+p{
+display: flex;
+flex-wrap: wrap;
+font-size: 25px;
+color: #E4E4E9;
+text-align: left;  
+padding-left: 3%;
+	}
+	
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 24%;
+  padding: 0 4px;
+}
+
+.column img {
+  	margin-top: 8px;
+  	vertical-align: middle;
+  	width: 100%;
+	border-radius: 20px;
+}
+
+	.column h2 {
+font-size: 30px;
+color: #E4E4E9;
+text-align: left; 
+color: #E4E4E9; 
+padding: 5%;
+	}
+	
+.column2 {
+  flex: 50%;
+  max-width: 49%;
+  padding: 0 4px;
+}
+	
+a {
+display: flex;
+ flex-wrap: wrap;
+font-size: 25px;
+color: cornflowerblue;
+text-align: left;  
+padding-left: 3%;
+	}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+	.column2{
+		flex: 100%;
+    max-width: 100%;
+	}
+	.video{
+		max-width: 100%;
+	}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+	.column2{
+		flex: 100%;
+    max-width: 100%;
+	}
+	.video{
+		max-width: 100%;
+	}
+}
+	
+</style>	
+</head>
+
+	
+<body>
+
+<div class="row">
+		<div class="column2">
+	<h1> Gun Make Die</h1>
+  </div>
+</div>
+<div class="row">
+	<div class="column2">
+	<h2> Project Type: Game Jam</h2>
+	<h2>Game Type: Video Game</h2>
+	<h2>Software: Unity, Visual Studio</h2>
+	<h2>Coding Languages: C#</h2>
+  </div>
+  <div class="column2">
+
+<p> Gun Make Die was made in 2 days for the 2022 GMTK Game Jam. The theme was "a roll of the dice" I interpretted the theme very literally and created a round-based first person shooter where the difficulty of each round is determined by the role of a die. The Die in the middle of the level is rolled using physics. When the button is pressed a force is applied and it spawns enemies based on what number comes up. This game includes power ups such as faster firing speed and dual wielding.</p>
+	  
+<a href="https://hazix.itch.io/gun-makes-die" target="_blank">Play On Itch.io</a>
+</div>
+
+
+<div class="row" style="padding-bottom: 5%">
+  <div class="column">
+<video src="img/V1.mp4"  style="width: 200%"  autoplay muted loop></video>
+  </div>
+  <div class="column">
+
+	  
+	  
+  </div>
+  <div class="column">
+<img src="img/img1.jpg">
+	  <img src="img/img3.jpg">
+	  
+  </div>
+	<div class="column">
+<img src="img/img2.jpg">
+		<img src="img/img4.jpg">
+  </div>
+</div>	
+
+	
+<!--    <img src="img/" id=""alt=""/>   -->
+<!-- <img src="img/img_01.png" style = "display:none" id="img1"> -->
+	
+<div>
+	<a href="javascript:window.history.back();" class="button" style = "text-decoration: none"><img border="0"  src="img/go_back.png"></a>
+	  </div>
+	
+<!-- FINISH HTML CODE HERE -->
+	
+</body>
+</html>
