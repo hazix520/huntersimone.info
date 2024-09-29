@@ -1,110 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
+
+<title>Simone Portfolio</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 <meta charset="UTF-8">
+
+<!-- import external scripts here --> 
+
+<!-- <script type="text/javascript" src="#" ></script> --> 
+	
+<!-- modify CSS properties here --> 
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #15151A;
 }
 .header {
-    padding: 10px; /* some padding */
+    padding: 0, 20%px; /* some padding */
     text-align: center; /* center the text */
-    background: #1abc9c; /* green background */
-    color: white; /* white text color */
+    background: #15151A;
+    color: #E4E4E9; /* white text color */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1%;
 }
 /* Increase the font size of the <h1> element */
 .header h1 {
     font-size: 70px;
+    color: #E4E4E9;
+	}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+	grid-template-rows: auto;
+    width: 100%;
+    padding-bottom: 10%;
 }
-.navbar {
-    overflow: hidden; /* Hide overflow */
-    background-color: #333; /* Dark background color */
+.grid-item {
+    padding: 2%;
+    font-size: 30px;
+    text-align: center;
+	transition: .5s ease;
+	width: 97%;
 }
-/* Style the navigation bar links */
-.navbar a {
-    float: left; /* Make sure that the links stay side-by-side */
-    display: block; /* Change the display to block, for responsive reasons (see below) */
-    color: white; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 14px 20px; /* Add some padding */
-    text-decoration: none; /* Remove underline */
-}
-/* Change color on hover/mouse-over */
-.navbar a:hover {
-    background-color: #ddd; /* Grey background color */
-    color: black; /* Black text color */
+.grid-item img {
+    transition: .5s ease;
+    vertical-align: middle;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
 }
 	
+.grid-item:hover {
+    scale: 1.03;
+	opacity: 0.95;
+}
+.grid-item iframe {
+	transition: .5s ease;
+    vertical-align: middle;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+	}
 	
-/* Ensure proper sizing */
-* {
-  box-sizing: border-box;
-}
-
-/* Column container */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 50%; /* Set the width of the sidebar */
-  background-color: #f1f1f1; /* Grey background color */
-  padding: 20px; /* Some padding */
-}
-
 /* Main column */
 .main {
-  flex: 50%;
-  background-color: white; /* White background color */
-  padding: 20px; /* Some padding */
+    flex: 100%;
+    font-size: 20px;
+    color: #15151A;
+    background-color: #606070;
+    padding: 10%px; /* Some padding */
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    padding-top: 1%;
 }
-	
-	
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
+.main h1{
+	font-size: 70px;
+    color: #15151A;
+
+	}
+.main h2{
+	font-size: 30px;
+    color: #15151A;
+	text-align:left;
+	padding-bottom: 5%;
+		flex: 100%;
+	}
+.links {
+	padding: 10px;
+    text-align: center;
+    background-color: #15151a;
+	font-size: 15px;
+    color: #E4E4E9;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+.grid-container {
+    grid-template-columns: repeat(2,2fr);
 }
-	
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+.grid-container {
+    grid-template-columns: repeat(1,2fr);
+}
+}
 </style>
-</head>
-<body>
+</head><body style="margin: 0;">
 <div class="header">
-  <h1>Hazix.Fun</h1>
-  <p>A website I made for fun</p>
+  <h1>Hunter Simone</h1>
+  <p style="font-size: 30px">Game Design Portfolio</p>
+	<p style="font-size: 20px">click on project to learn  more</p>
+	
 </div>
-<div class="navbar"> <a href="#">Link</a> <a href="#">Link</a> <a href="#">Link</a> </div>
-<div class="row">
-	<div class="side">
-	<h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:100px;">Image</div>
+
+
+  
+<div class="main">
+  <div class="grid-container">
+	
+	<div class="grid-item"> 
+	  <a href="games/birdgame/bird.html"> <img border="0"  src="img/bird_cover.png" alt="Untitled Bird Game (Prototype)" > </a> 
+	  </div>
+	<div class="grid-item">
+		<a href="games/pirategame/pirate.html"> <img border="0"  src="img/pirate_cover.png" alt="A Pirate's Life (Board Game)" > </a>
+	  </div> 
+	  
+  	<div class="grid-item">
+	  <a href="games/wanted/wanted.html"> <img border="0"  src="img/wanted_cover.png" alt="Wanted (Minigame)" > </a> 
+		
+	  </div>
+	  
+	  <div class="grid-item">
+	  <a href="games/dodgeball/dodgeball.html"> <img border="0"  src="img/dodgeball_cover.png" alt="Arena Dodgeball (Game Prototype)" > </a> 
+	  </div>
+	  
+	  <div class="grid-item">
+	  <a href="games/gungame/gun.html"> <img border="0"  src="img/gun_cover.png" alt="Gun Make Die (Game Jam Game)" > </a> 
+		
+	  </div>
+	  
+	    <div class="grid-item">
+			<a href="games/canvas/canvas.html"> <img border="0"  src="img/canvas_cover.png" alt="Interactivity Using HTML Canvas" > </a>
+	  
+	  </div>
+	  
+	  <div class="grid-item">
+	  <a href="games/fishgame/fish.html"> <img border="0"  src="img/fish_cover.png" alt="Flippin Floppers (Game Jam Game)" > </a> 
+	  </div>
+	  
+	  <div class="grid-item">
+	   <a href="games/rockgame/rock.html"> <img border="0"  src="img/rock_cover.png" alt="Just A Rock (Game Jam Game)" > </a> 
+	  </div>
+	  
+	  <div class="grid-item">
+	  <a href="games/misc/misc.html"> <img border="0"  src="img/misc_cover.png" alt="Art and Animation" > </a> 
+	  </div>
+	  
+	  
+
 	</div>
+</div>
 	
 	
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    
-</div>
-</div>
 </body>
 </html>
