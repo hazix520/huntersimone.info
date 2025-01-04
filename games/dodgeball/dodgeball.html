@@ -67,7 +67,7 @@ padding-left: 3%;
 .column {
   flex: 25%;
   max-width: 24%;
-  padding: 0 4px;
+  padding: 8px 8px;
 }
 
 .column img {
@@ -90,11 +90,17 @@ padding: 5%;
   max-width: 49%;
   padding: 0 4px;
 }
+	
+ul{
+font-size: 25px;
+color: #E4E4E9;
+padding-left: 3%;
+	}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
-    max-width: 50%;
+    flex: 40%;
+    max-width: 40%;
   }
 	.column2{
 		flex: 100%;
@@ -103,7 +109,7 @@ padding: 5%;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1800px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -134,13 +140,21 @@ padding: 5%;
   </div>
   <div class="column2">
 
-<p> Arena Dodgeball is currently in the prototype stage. The movement and inventory system are done and I am currently working on multiplayer. Players can hold up to two dodgeballs that they can charge to throw. Players can also wall jump if they jump while touching a wall at the peak of their jump. Skilled players can drop a dodgeball below their feet to act as another jump.</p>
+<p> Arena Dodgeball is currently in the prototype stage. The focus of this prototype was primarily on the movement. Players can hold up to two dodgeballs that they can charge to throw. Players can also wall jump if they jump while touching a wall at the peak of their jump. Skilled players can drop a dodgeball below their feet to act as another jump.</p>
+	  
+<ul>
+  <li>Physics-based Movement System</li>
+	<li>Pickup and Inventory System</li>
+	<li>Limited Multiplayer (using Netcode for GameObjects package</li>
+</ul>
 </div>
 
 
 <div class="row" style="padding-bottom: 5%">
   <div class="column">
-<video src="img/V1.mp4"  style="width: 200%" autoplay muted loop></video>
+<iframe width="854" height="480"
+src="https://www.youtube.com/embed/AFV6DMk4NnI?autoplay=1&mute=1&loop=1">
+</iframe>
   </div>
   <div class="column">
 
@@ -148,7 +162,9 @@ padding: 5%;
 	  
   </div>
   <div class="column">
-<video src="img/V2.mp4"  style="width: 200%" autoplay muted loop></video>
+<iframe width="854" height="480"
+src="https://www.youtube.com/embed/Lf62s7a6erw?autoplay=1&mute=1&loop=1">
+</iframe>
   </div>
 	<div class="column">
 

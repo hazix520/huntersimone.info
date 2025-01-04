@@ -1,0 +1,185 @@
+/* style.css */
+
+/* Basic styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-container {
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.filter-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #333;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #ddd;
+}
+
+/* Grid styling */
+
+
+.project {
+  border: 2px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 14px;
+  color: #555;
+}
+
+body {
+    background-color: #15151A;
+}
+.header {
+    padding: 0, 20%px; /* some padding */
+    text-align: center; /* center the text */
+    background: #15151A;
+    color: #E4E4E9; /* white text color */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1%;
+}
+/* Increase the font size of the <h1> element */
+.header h1 {
+    font-size: 70px;
+    color: #E4E4E9;
+	}
+	
+.footer{
+	margin-top: auto;
+	font-size: 20px;
+    text-align: center; /* center the text */
+    background: #15151A;
+    color: #E4E4E9; /* white text color */
+    width: 100%;
+    height: 100%;
+	}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+	gap: 15px;
+    padding-bottom: 30px;
+}
+.grid-item {
+    font-size: 30px;
+    text-align: center;
+	width: 100%;
+  opacity: 1; /* Start with hidden state */
+  transform: translateY(20px); /* Start from a slight offset */
+	aspect-ratio: 3 / 2;
+	
+}
+.grid-item img {
+    vertical-align: middle;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+	
+.grid-item:hover {
+    scale: 1.03;
+	opacity: 0.95;
+}
+.grid-item iframe {
+    vertical-align: middle;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+	}
+	
+/* Main column */
+.main {
+    flex: 100%;
+    font-size: 20px;
+    color: #15151A;
+    background-color: #606070;
+    padding: 10%px; /* Some padding */
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    padding-top: 1%;
+}
+.main h1{
+	font-size: 70px;
+    color: #15151A;
+
+	}
+.main h2{
+	font-size: 30px;
+    color: #15151A;
+	text-align:left;
+	padding-bottom: 5%;
+		flex: 100%;
+	}
+.links {
+	padding: 10px;
+    text-align: center;
+    background-color: #15151a;
+	font-size: 15px;
+    color: #E4E4E9;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #445A66;}
+#Projects {background-color: #445A66}
+#About {background-color: #445A66;}
+#Resume {background-color: #445A66;}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+.grid-container {
+    grid-template-columns: repeat(2,1fr);
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+.grid-container {
+    grid-template-columns: 1fr;
+}
+}
