@@ -1,8 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R478EKGH6M"></script>
+<link rel="stylesheet" href="css/common_style.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -20,18 +19,11 @@
 <script src="js/createFaces.js" ></script>
 <script src="js/drawFaces.js" ></script>
 <script src="js/checkDistance.js" ></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9715432405174987"
-     crossorigin="anonymous"></script>
 
 <!-- <script type="text/javascript" src="#" ></script> -->
 <!-- modify CSS properties here -->
 
 <style type="text/css">
-body,td,th {
-font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif", "Bernard MT Condensed";
-font-size: 14px;
-color: rgba(255,255,255,1);
-}
 
 body {
 background-color: #15151A;
@@ -73,7 +65,15 @@ display: inline-block;
 
 <body>
 
-
+<header class="header">
+        <div class="name">Hunter Simone</div>
+        <nav class="nav">
+            <a href="http://huntersimone.info/index.html"><img src="img/home-icon.png" alt="Home">Home</a>
+            <a href="http://huntersimone.info/projects.html"><img src="img/projects-icon.png" alt="Projects">Projects</a>
+            <a href="http://huntersimone.info/about.html"><img src="img/about-icon.png" alt="About">About</a>
+            <a href="http://huntersimone.info/archive.html"><img src="img/archive-icon.png" alt="Archive">Archive</a>
+        </nav>
+    </header>
 	
 <div id="container">
 <!-- START HTML CODE HERE -->
@@ -116,9 +116,6 @@ display: inline-block;
 	
 <!-- FINISH HTML CODE HERE -->
 </div>
-<div>
-	<a href="javascript:window.history.back();" class="button" style = "text-decoration: none"><img border="0"  src="img/go_back.png"></a>
-	  </div>
 <script>
 
 ///////////////////////////////////////////////////////////////////////
@@ -519,5 +516,23 @@ requestAnimFrame(draw); // CALLS draw() every nth of a second
 
 </script>
 
+<div class="footer">© 2025 Hunter Simone</div>
+<div class="footer">
+	
+	<a href="https://www.linkedin.com/in/huntersimone/" target="_blank">
+          <img width="32" height="32" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="image-rendering:pixelated">
+        </a>
+	
+	<a href="https://hazix.itch.io/" target="_blank">
+          <img width="32" height="32" src="img/itch-icon.svg" alt="itch.io" style="image-rendering:pixelated">
+        </a>
+	
+	<a href="mailto:hunter.e.simone@gmail.com" target="_blank">
+          <img width="32" height="32" src="img/email_me.svg" alt="Email Me" style="image-rendering:pixelated">
+        </a>
+	
+</div>
+
+	
 </body>
 </html>
