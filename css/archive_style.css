@@ -1,0 +1,77 @@
+.content{
+	background-color: #15151A;
+	color: white;
+	padding: 60px 30px;
+}
+
+.content h1{
+	font-size: 60px;
+	text-align: center;
+}
+
+.content h2{
+	font-size: 40px;
+	text-align: center;
+}
+
+.content p{
+	font-size: 20px;
+	text-align: center;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+	gap: 15px;
+}
+.grid-item {
+	padding-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+	width: 100%;
+  opacity: 1; /* Start with hidden state */
+  transform: translateY(20px); /* Start from a slight offset */
+	aspect-ratio: 3 / 2;
+	
+}
+.grid-item img {
+    vertical-align: middle;
+	width: 100%;
+    height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+	
+.grid-item:hover {
+    scale: 1.03;
+	opacity: 0.95;
+}
+
+
+@media screen and (max-width: 1000px) {
+.grid-container{
+    grid-template-columns: repeat(2,1fr);
+}
+.intro-p{
+	font-size: 22px;
+}
+.intro-p img{
+	width: 40%;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+.grid-container {
+    grid-template-columns: 1fr;
+}
+.intro-p{
+	font-size: 18px;
+}
+.intro-p img{
+	width: 50%;
+}
+}

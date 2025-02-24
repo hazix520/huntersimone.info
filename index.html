@@ -1,131 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<title>Simone Portfolio</title>
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Simone</title>
+	<link rel="stylesheet" href="css/common_style.css">
+	<link rel="stylesheet" href="css/home_style.css">
 	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-<meta charset="UTF-8">
+   
+</head>
+<body>
 
-<!-- import external scripts here --> 
-
-<!-- <script type="text/javascript" src="#" ></script> --> 
-	
-<!-- modify CSS properties here --> 
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head><body style="margin: 0;">
-<div class="header">
-  <h1>Hunter Simone</h1>
-  <p style="font-size: 30px">Game Design Portfolio</p>
-	
-</div>
-	
-<button class="tablink" onclick="openPage('Home', this, '#606070')">Home</button>
-<button class="tablink" onclick="openPage('Projects', this, '#606070')" id="defaultOpen">Projects</button>
-<button class="tablink" onclick="openPage('About', this, '#606070')">Contact</button>
-<button class="tablink" onclick="openPage('Resume', this, '#606070')">Resume</button>
-  
-<div id="Home" class ="tabcontent">
-	<h1>Home</h1>
-	</div>
-	
-<div id="Projects" class="tabcontent">
-	
-	<div class="filter-container">
-    <button class="filter-btn" data-skill="all">All Projects</button>
-    <button class="filter-btn" data-skill="design">Game Design</button>
-    <button class="filter-btn" data-skill="programming">Programming</button>
-    <button class="filter-btn" data-skill="art">Art</button>
-    <button class="filter-btn" data-skill="games">Playable Games</button>
-  </div>
-	
-  <div class="grid-container">
-	
-	<div class="grid-item" data-skills="design,programming,art,games">
-    <a href="games/birdgame/bird.html">
-        <img src="img/bird_cover.jpg" alt="Untitled Bird Game (Game)">
-    </a>
-</div>
-	  
-	  <div class="grid-item" data-skills="design,programming">
-    <a href="games/unmanned/unmanned.html">
-        <img src="img/unmanned_cover.jpg" alt="Unmanned (Game)">
-    </a>
-</div>
-	  
-	<div class="grid-item" data-skills="design">
-		<a href="games/pirategame/pirate.html"> 
-		<img border="0"  src="img/pirate_cover.png" alt="A Pirate's Life (Board Game)" > </a>
-	  </div> 
-	  
-  	<div class="grid-item" data-skills="programming,art,games">
-	  <a href="games/wanted/wanted.html"> <img border="0"  src="img/wanted_cover.png" alt="Wanted (Minigame)" > </a> 
+    <header class="header">
+        <div class="name">Hunter Simone</div>
+        <nav class="nav">
+            <a href="index.html"><img src="img/home-icon.png" alt="Home">Home</a>
+            <a href="projects.html"><img src="img/projects-icon.png" alt="Projects">Projects</a>
+            <a href="about.html"><img src="img/about-icon.png" alt="About">About</a>
+            <a href="archive.html"><img src="img/archive-icon.png" alt="Archive">Archive</a>
+        </nav>
+    </header>
+	<br>
+	<br>
+	<hr>
+		<div class="intro-p">
 		
-	  </div>
-	  
-	  <div class="grid-item" data-skills="programming">
-	  <a href="games/dodgeball/dodgeball.html"> <img border="0"  src="img/dodgeball_cover.png" alt="Arena Dodgeball (Game Prototype)" > </a> 
-	  </div>
-	  
-	  <div class="grid-item" data-skills="programming,design,games">
-	  <a href="games/gungame/gun.html"> <img border="0"  src="img/gun_cover.png" alt="Gun Make Die (Game Jam Game)" > </a> 
+		<p>Welcome to my game development portfolio! My name is Hunter Simone, I am an aspiring game developer with a wide variety of skills who specializes in programming and gameplay design.  </p>
+		</div>
+		<br>
+		<hr>
+	
+
 		
-	  </div>
-	  
-	    <div class="grid-item" data-skills="programming,art">
-			<a href="games/canvas/canvas.html"> <img border="0"  src="img/canvas_cover.png" alt="Interactivity Using HTML Canvas" > </a>
-	  
-	  </div>
-	  
-	  <div class="grid-item" data-skills="programming,games">
-	  <a href="games/fishgame/fish.html"> <img border="0"  src="img/fish_cover.png" alt="Flippin Floppers (Game Jam Game)" > </a> 
-	  </div>
-	  
-	  <div class="grid-item" data-skills="programming,games">
-	   <a href="games/rockgame/rock.html"> <img border="0"  src="img/rock_cover.png" alt="Just A Rock (Game Jam Game)" > </a> 
-	  </div>
-	  
-	  <div class="grid-item"data-skills="art">
-	  <a href="games/misc/misc.html"> <img border="0"  src="img/misc_cover.png" alt="Art and Animation" > </a> 
-	  </div>
-	  
-	  
+	<div class ="content">
+		
+		<h2>Featured Projects</h2>
+		<div class="grid-container">
+			
+    <div class="grid-item"> 
+		<a href="games/birdgame/bird.html"> <img src="img/bird_cover.jpg" alt="Untitled Bird Game (Game)"> </a> </div>
+    <div class="grid-item" data-skills="physical"> <a href="games/escape/escape.html"> <img src="img/escape_cover.jpg" alt="Memory Museum Escape Room"> </a> </div>
+    <div class="grid-item"> 
+		<a href="projects.html"> <img border="0"  src="img/all_projects.png" alt="All Projects" > </a> </div>
+			
+ 		</div>
+		<p>Email Me</p>
+		<div class = "mail-img">
+		<a href="mailto:contact.hunter.e.simone@gmail.com" target="_blank">
+          <img width="64" height="64" src="img/email_me.svg" alt="Email Me" >
+        </a>
+		</div>
+   </div>
+	
+<div class="footer">© 2025 Hunter Simone</div>
+<div class="footer">
+	
+	<a href="https://www.linkedin.com/in/huntersimone/" target="_blank">
+          <img width="32" height="32" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="image-rendering:pixelated">
+        </a>
+	
+	<a href="https://hazix.itch.io/" target="_blank">
+          <img width="32" height="32" src="img/itch-icon.svg" alt="itch.io" style="image-rendering:pixelated">
+        </a>
+	
+	<a href="mailto:hunter.e.simone@gmail.com" target="_blank">
+          <img width="32" height="32" src="img/email_me.svg" alt="Email Me">
+        </a>
+	
+</div>
 
-	</div>
-	</div>
-	
-<div id="About" class ="tabcontent">
-	<h1>Contact</h1>
-	</div>
-	
-<div id="Resume" class ="tabcontent">
-	<h1>Resume</h1>
-	</div>
-	
-<div class="footer">Website built by Hunter Simone</div>
-
-<script src="js/sort.js"></script>
-	
-	<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-	
 </body>
 </html>

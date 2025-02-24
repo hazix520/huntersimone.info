@@ -1,0 +1,28 @@
+.content{
+	background-color: #15151A;
+	color: white;
+	padding: 60px 30px;
+}
+
+.content h1{
+	font-size: 60px;
+	text-align: center;
+}
+
+.content h2{
+	font-size: 40px;
+	text-align: center;
+}
+
+.content p{
+	font-size: 20px;
+	text-align: center;
+}
+
+.mail-img{
+  text-align: center;
+}
+.mail-img img:hover{
+	scale: 1.1;
+	opacity: 0.95;
+} 

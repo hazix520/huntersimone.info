@@ -31,6 +31,11 @@ height: 800px;
 	
 body {
 background-color: #15151A;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
+}
+h1, h2, p, ul, a {
+    font-family: inherit; /* Ensure inheritance from the body */
+	font-weight: normal;
 }
 	
 h1 {
@@ -99,6 +104,12 @@ color: cornflowerblue;
 text-align: left;  
 padding-left: 3%;
 	}
+	
+ul{
+font-size: 25px;
+color: #E4E4E9;
+padding-left: 3%;
+	}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -151,13 +162,24 @@ padding-left: 3%;
 
 <p> Just A Rock was made in 1 week for the Brackeys Game Jam 2021.2. The theme was "let there be chaos." I chose to create a 2D platformer with levels that resemble a bullet hell. The player must shoot rocks at enemies, conjure a shield, jump, double jump and dash through levels to make it to the door at the end.</p>
 	  
+<ul>
+	<li>Made in 72 Hours</li>
+  <li>Physics-based Movement System</li>
+	<li>Movement Abilities</li>
+  <li>Combat System</li>
+	<li>Sound Effects</li>
+  <li>Pixel Art</li>
+</ul>
+	  
 <a href="https://hazix.itch.io/just-a-rock" target="_blank">Play On Itch.io</a>
 </div>
 
 
 <div class="row" style="padding-bottom: 5%">
   <div class="column">
-<video src="img/V1.mp4"  style="width: 200%"  autoplay muted loop></video>
+<iframe width="854" height="480"
+src="https://www.youtube.com/embed/UWv4guJw1WU?autoplay=1&mute=1&loop=1">
+</iframe>
   </div>
   <div class="column">
 

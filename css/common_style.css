@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #15151A;
+  color: white;
+}
+/* Sticky Header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+/* Logo/Name */
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* Navigation Bar */
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 0px 50px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between image and text */
+  transition: background 0.3s;
+}
+.nav a:hover {
+  background: #555;
+  border-radius: 5px;
+}
+/* Small Icons */
+.nav img {
+  width: 20px;
+  height: 20px;
+}
+.footer {
+  margin-top: auto;
+  font-size: 20px;
+  text-align: center; /* center the text */
+  background: #3336;
+  color: #E4E4E9; /* white text color */
+  width: 100%;
+  height: 100%;
+}
+.footer img:hover {
+  scale: 1.1;
+  opacity: 0.95;
+}

@@ -31,6 +31,11 @@ height: 800px;
 	
 body {
 background-color: #15151A;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
+}
+h1, h2, p, ul, a {
+    font-family: inherit; /* Ensure inheritance from the body */
+	font-weight: normal;
 }
 	
 h1 {
@@ -99,6 +104,12 @@ color: cornflowerblue;
 text-align: left;  
 padding-left: 3%;
 	}
+ul{
+font-size: 25px;
+color: #E4E4E9;
+padding-left: 3%;
+	}	
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -151,13 +162,23 @@ padding-left: 3%;
 
 <p> Gun Make Die was made in 2 days for the 2022 GMTK Game Jam. The theme was "a roll of the dice" I interpretted the theme very literally and created a round-based first person shooter where the difficulty of each round is determined by the role of a die. The Die in the middle of the level is rolled using physics. When the button is pressed a force is applied and it spawns enemies based on what number comes up. This game includes power ups such as faster firing speed and dual wielding.</p>
 	  
+<ul>
+  <li>Round-based Difficulty</li>
+  <li>Random Upgrade System</i>
+	<li>Enemy Logic</li>
+	  <li>Combat System</li>
+	  <li>Made in 48 Hours</li>
+</ul>
+	  
 <a href="https://hazix.itch.io/gun-makes-die" target="_blank">Play On Itch.io</a>
 </div>
 
 
 <div class="row" style="padding-bottom: 5%">
   <div class="column">
-<video src="img/V1.mp4"  style="width: 200%"  autoplay muted loop></video>
+<iframe width="854" height="480"
+src="https://www.youtube.com/embed/Abp7bP6HzC8?autoplay=1&mute=1&loop=1">
+</iframe>
   </div>
   <div class="column">
 

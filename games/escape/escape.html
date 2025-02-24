@@ -2,19 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Unmanned</title>
-	
+<title>The Memory Museum</title>
+<link rel="stylesheet" href="css/common_style.css">
 <style type="text/css">
 	
 	
-body {
-background-color: #15151A;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
-}
-h1, h2, p, ul, a {
-    font-family: inherit; /* Ensure inheritance from the body */
-	font-weight: normal;
-}
 h1 {
 font-size: 70px;
 color: #E4E4E9;
@@ -36,8 +28,15 @@ flex-wrap: wrap;
 font-size: 25px;
 color: #E4E4E9;
 text-align: left;  
+	}
+	
+
+ul{
+font-size: 25px;
+color: #E4E4E9;
 padding-left: 3%;
 	}
+
 	
 .row {
   display: flex;
@@ -101,21 +100,7 @@ padding: 5%;
   max-width: 49%;
   padding: 0 4px;
 }
-
-ul{
-font-size: 25px;
-color: #E4E4E9;
-padding-left: 3%;
-	}
 	
-	a {
-display: flex;
- flex-wrap: wrap;
-font-size: 25px;
-color: cornflowerblue;
-text-align: left;  
-padding-left: 3%;
-	}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -153,36 +138,54 @@ padding-left: 3%;
 	
 <body>
 
+<header class="header">
+        <div class="name">Hunter Simone</div>
+        <nav class="nav">
+            <a href="index.html"><img src="img/home-icon.png" alt="Home">Home</a>
+            <a href="projects.html"><img src="img/projects-icon.png" alt="Projects">Projects</a>
+            <a href="about.html"><img src="img/about-icon.png" alt="About">About</a>
+            <a href="archive.html"><img src="img/archive-icon.png" alt="Archive">Archive</a>
+        </nav>
+    </header>
 	
 <div class="row">
 		<div class="column2">
-	<h1>Unmanned</h1>
+	<h1>The Memory Museum</h1>
   </div>
 </div>
 <div class="row">
-	<div class="column2">
-	<h2> Project Type: School Assignment</h2>
-	<h2>Game Type: Video Game</h2>
-	<h2>Software: Unity, Visual Studio, Blender</h2>
-	<h2>Coding Languages: C#</h2>
+<div class="column2">
+  <h2> Project Type: Group Project</h2>
+  <h2>Game Type: Physical Game</h2>
+  <h2>My Role: Producer and Puzzle Designer</h2>
   </div>
   <div class="column2">
 
-<p> Unmanned is a game where you play as a space rover whose goal is to repair and recover data from abandoned space rovers before coming one itself</p>
-	  
+<p> The Talons of Icarus is a game where you play as a baby phoenix that is trying to reach they sky.</p>
 <ul>
-  <li>Hybrid Movement System (Physics and Rotating Planet)</li>
-  <li>Minigame logic</li>
-	<li>3D Model</li>
+  <li>Physics-based Movement System</li>
+  <li>Combat System</li>
+	<li>Timer and Highscore Tracking</li>
+	<li>Camera Movement and Effects</li>
+  <li>Pixel Art and Animations</li>
 </ul>
 	  
 </div>
+
+	<div class="row" style="padding-bottom: 5%"> 
+
+	
+	</div>
+
+<div class="row" style="padding-bottom: 5%">
+  <div class="column">
+
+
 	  
   </div>
   <div class="column">
-<iframe width="854" height="480"
-src="https://www.youtube.com/embed/wbrbAvgAXhk?autoplay=1&mute=1&loop=1">
-</iframe>
+
+	  
   </div>
 	
   <div class="column">
@@ -192,12 +195,23 @@ src="https://www.youtube.com/embed/wbrbAvgAXhk?autoplay=1&mute=1&loop=1">
 
 </div>
 	
-
+<div class="footer">© 2025 Hunter Simone</div>
+<div class="footer">
 	
-<div>
-	<a href="javascript:window.history.back();" class="button" style = "text-decoration: none"><img border="0"  src="img/go_back.png"></a>
-	  </div>
+	<a href="https://www.linkedin.com/in/huntersimone/" target="_blank">
+          <img width="32" height="32" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="image-rendering:pixelated">
+        </a>
 	
+	<a href="https://hazix.itch.io/" target="_blank">
+          <img width="32" height="32" src="img/itch-icon.svg" alt="itch.io" style="image-rendering:pixelated">
+        </a>
+	
+	<a href="mailto:hunter.e.simone@gmail.com" target="_blank">
+          <img width="32" height="32" src="img/email_me.svg" alt="Email Me" style="image-rendering:pixelated">
+        </a>
+	
+</div>
+</div>
 	
 </body>
 </html>

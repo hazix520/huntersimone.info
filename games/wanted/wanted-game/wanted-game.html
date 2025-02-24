@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R478EKGH6M"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -16,85 +17,24 @@
 	
 <!-- import external .js scripts here -->
 	
+<script src="js/createFaces.js" ></script>
+<script src="js/drawFaces.js" ></script>
+<script src="js/checkDistance.js" ></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9715432405174987"
+     crossorigin="anonymous"></script>
 
 <!-- <script type="text/javascript" src="#" ></script> -->
 <!-- modify CSS properties here -->
 
 <style type="text/css">
+body,td,th {
+font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif", "Bernard MT Condensed";
+font-size: 14px;
+color: rgba(255,255,255,1);
+}
 
 body {
 background-color: #15151A;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
-}
-h1, h2, p, ul, a {
-    font-family: inherit; /* Ensure inheritance from the body */
-	font-weight: normal;
-}
-	
-h1 {
-font-size: 70px;
-color: #E4E4E9;
-text-align: left; 
-padding-left: 1.8%;
-}
-h2 {
-display: flex;
- flex-wrap: wrap;
-font-size: 25px;
-color: #E4E4E9;
-text-align: left;  
-padding-left: 3%;
-	}
-	
-p{
-display: flex;
-flex-wrap: wrap;
-font-size: 25px;
-color: #E4E4E9;
-text-align: left;  
-padding-left: 3%;
-	}
-a {
-display: flex;
- flex-wrap: wrap;
-font-size: 25px;
-color: cornflowerblue;
-text-align: left;  
-padding-left: 3%;
-	}
-	
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 24%;
-  padding: 0 4px;
-}
-
-.column img {
-  	margin-top: 8px;
-  	vertical-align: middle;
-  	width: 100%;
-	border-radius: 20px;
-}
-	
-	.column h2 {
-font-size: 30px;
-color: #E4E4E9;
-text-align: left; 
-color: #E4E4E9; 
-padding: 5%;
-	}
-	
-.column2 {
-  flex: 50%;
-  max-width: 49%;
-  padding: 0 4px;
 }
 
 #container {
@@ -102,6 +42,15 @@ position: relative;
 text-align: left;
 width: 95%;
 height: 800px;
+}
+
+#fmxCanvas {
+position: relative;
+background-color:#15151A;
+border: rgba(255,255,255,1) solid;
+margin: 10px;
+cursor: crosshair;
+display: inline-block;
 }
 	
 .button{
@@ -123,44 +72,50 @@ height: 800px;
 </head>
 
 <body>
-<h1>Wanted</h1>
-<div class="row">
-	<div class="column2">
-		<h2>Project Type: School => Personal Project</h2>
-		<h2>Game Type: Minigame</h2>
-		<h2>Software: HTML Canvas</h2>
-		<h2>Coding Languages: JavaScript, HTML, CSS</h2>
-	</div>
+
+
 	
-	<div class="column2">
-	<p>This minigame is a recreation of the one in Super Mario 64 DS. It was the capstone project for my Creative Coding Class and has since been refined and built upon outside of class.</p>
-	<a href="https://fmx310.santiago.bz/FMX310/sp22/hunter_simone/08_oopgame/oopgame_07.html" target="_blank">Play version made in class</a>
-	</div>
-	</div>
+<div id="container">
+<!-- START HTML CODE HERE -->
+
+<div style = "text-align:center;">
+	<canvas id="fmxCanvas" width="640" height="640"></canvas>
+</div>
+
+
+<div id="display"></div>
 	
+<!--    <img src="img/" id=""alt=""/>   -->
 	
+<img src="img/wanted_1.png" style = "display:none" id="img1">
+<img src="img/wanted_2.png" style = "display:none" id="img2">
+<img src="img/wanted_3.png" style = "display:none" id="img3">
+<img src="img/wanted_4.png" style = "display:none" id="img4">
+<img src="img/wanted_5.png" style = "display:none" id="img5">
+<img src="img/wanted_6.png" style = "display:none" id="img6">
+<img src="img/img_07.png" style = "display:none" id="img7">
 	
-<div class="row">
-	<div class="column">
-	<iframe width="854" height="480"
-src="https://www.youtube.com/embed/f0k1ADOlz_0?autoplay=1&mute=1&loop=1">
-</iframe>
-	<img src="img/img1.png">
-	</div>
+<img src="img/poster.png" style = "display:none" id="poster">
+
+<img src="img/oop_game_layout_1.png" style = "display:none" id="bg">
+
+<audio id="hit" >
+	<source src="audio/hit.mp3" type="audio/mp3" />
+</audio>
 	
-	<div class="column">
+<audio id="miss" >
+	<source src="audio/miss.mp3" type="audio/mp3" />
+</audio>
 	
-	</div>
+<audio id="gameOver" >
+	<source src="audio/gameOver.mp3" type="audio/mp3" />
+</audio>
 	
-	<div class="column">
-	<img style="width: 200%" src="img/img2.png">
-	</div>
+
+<br><br>
 	
-	<div class="column">
-	
-	</div>
-	</div>
-	
+<!-- FINISH HTML CODE HERE -->
+</div>
 <div>
 	<a href="javascript:window.history.back();" class="button" style = "text-decoration: none"><img border="0"  src="img/go_back.png"></a>
 	  </div>
