@@ -1,6 +1,11 @@
 .content{
 	background-color: #15151A;
 	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
 }
 
@@ -28,4 +33,11 @@
 } 
 .iframe{
 	align-content: center;
+}
+.content p{
+	text-align: center;
+	font-size: 25px;
+	width: 80%;
+    max-width: 900px;
+    min-width: 200px;
 }
